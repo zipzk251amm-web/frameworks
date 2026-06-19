@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "Frameworks - Laravel (Hospital API)",
+    "description": "CRUD API для сутності Hospital (Laravel)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET all hospitals",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/hospitals",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "hospitals"]
+        },
+        "description": "Призначення: Отримує список всіх лікарень у базі даних.\nМетод: GET\nURL: /api/hospitals"
+      },
+      "response": []
+    },
+    {
+      "name": "GET hospital by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/hospitals/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "hospitals", "1"]
+        },
+        "description": "Призначення: Отримує одну лікарню за її ID.\nМетод: GET\nURL: /api/hospitals/{id}"
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE hospital",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Міська лікарня №1\",\n    \"address\": \"вул. Лікарняна 5, Житомир\",\n    \"phone\": \"+380441234567\",\n    \"beds\": 150,\n    \"rating\": 4.7\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/hospitals",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "hospitals"]
+        },
+        "description": "Призначення: Створює нову лікарню.\nМетод: POST\nURL: /api/hospitals"
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE hospital",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"beds\": 160,\n    \"rating\": 4.8\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/hospitals/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "hospitals", "1"]
+        },
+        "description": "Призначення: Частково оновлює лікарню.\nМетод: PATCH\nURL: /api/hospitals/{id}"
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE hospital",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/hospitals/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "hospitals", "1"]
+        },
+        "description": "Призначення: Видаляє лікарню за її ID.\nМетод: DELETE\nURL: /api/hospitals/{id}"
+      },
+      "response": []
+    }
+  ]
+}
